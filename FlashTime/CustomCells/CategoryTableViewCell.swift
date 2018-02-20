@@ -53,7 +53,14 @@ class CategoryTableViewCell: UITableViewCell {
     }
     
     private func setUpViews() {
-        
+        setUpCategoryImageView()
+        setUpCategoryNameLabel()
+        setUpFlashCardNumberLabel()
+    }
+    public func configureCell(with category: Category) {
+        categoryNameLabel.text = category.name
+        numberOfCardsLabel.text = category.byUser
+        categoryImageView.image = #imageLiteral(resourceName: "placeholder-image")
     }
     
     private func setUpCategoryImageView() {

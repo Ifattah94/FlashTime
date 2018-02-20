@@ -11,8 +11,11 @@ class FlashCard: NSObject {
     let question: String
     let answer: String
     let cardID: String
-    init(question: String, answer: String, cardId: String) {
-        self.question = question; self.answer = answer; self.cardID = cardId
+    let categoryID: String
+    let byUser: String
+    let uID: String
+    init(question: String, answer: String, cardId: String, categoryID: String, byUser: String, uID: String) {
+        self.question = question; self.answer = answer; self.cardID = cardId; self.categoryID = categoryID; self.byUser = byUser; self.uID = uID
     }
     
 }

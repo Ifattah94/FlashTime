@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		14D53F78CD8D340306ACCBE9 /* Pods_FlashTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 061AC77B39C1F2D577E8A48F /* Pods_FlashTimeTests.framework */; };
 		1E6C92BF503797FB4C20A576 /* Pods_FlashTimeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5AEB24EDBDDC9C125A2086 /* Pods_FlashTimeUITests.framework */; };
+		810C0647203B6F2700ADD5BE /* DBService+FlashCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C0646203B6F2700ADD5BE /* DBService+FlashCard.swift */; };
+		810C064B203BC70200ADD5BE /* NewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810C064A203BC70200ADD5BE /* NewCategoryView.swift */; };
 		813A0EA62038C265008C2106 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813A0EA52038C265008C2106 /* HomeTableViewController.swift */; };
 		813A0EA82038C2F4008C2106 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813A0EA72038C2F4008C2106 /* FavoritesViewController.swift */; };
 		813A0EAA2038C328008C2106 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813A0EA92038C328008C2106 /* QuizViewController.swift */; };
@@ -59,6 +61,8 @@
 		061AC77B39C1F2D577E8A48F /* Pods_FlashTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C849325EEB8D98F26D87E0F /* Pods-FlashTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashTime/Pods-FlashTime.release.xcconfig"; sourceTree = "<group>"; };
 		3216ACDC87FF70A8C7F881CE /* Pods-FlashTimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashTimeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashTimeTests/Pods-FlashTimeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		810C0646203B6F2700ADD5BE /* DBService+FlashCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBService+FlashCard.swift"; sourceTree = "<group>"; };
+		810C064A203BC70200ADD5BE /* NewCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryView.swift; sourceTree = "<group>"; };
 		813A0EA52038C265008C2106 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = FlashTime/ViewControllers/HomeTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		813A0EA72038C2F4008C2106 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = FlashTime/ViewControllers/FavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
 		813A0EA92038C328008C2106 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		81AE2A1A20363E4C00914A5F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				810C064A203BC70200ADD5BE /* NewCategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 				819916802037A063009EDDD5 /* DBService+AppUser.swift */,
 				8199167E203784E4009EDDD5 /* DBServiceDelegate.swift */,
 				81C46AEF203A8456001B9859 /* DBService+Category.swift */,
+				810C0646203B6F2700ADD5BE /* DBService+FlashCard.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -581,11 +587,13 @@
 			files = (
 				819916852037B30C009EDDD5 /* CreateAccountViewController.swift in Sources */,
 				81C46AEE203A67A2001B9859 /* NewCategoryViewController.swift in Sources */,
+				810C0647203B6F2700ADD5BE /* DBService+FlashCard.swift in Sources */,
 				81991673203771C0009EDDD5 /* AppUser.swift in Sources */,
 				813A0EA82038C2F4008C2106 /* FavoritesViewController.swift in Sources */,
 				81C46AF0203A8456001B9859 /* DBService+Category.swift in Sources */,
 				819916752037726E009EDDD5 /* Category.swift in Sources */,
 				8199167F203784E4009EDDD5 /* DBServiceDelegate.swift in Sources */,
+				810C064B203BC70200ADD5BE /* NewCategoryView.swift in Sources */,
 				8199167B203780D7009EDDD5 /* FlashCard.swift in Sources */,
 				813A0EAA2038C328008C2106 /* QuizViewController.swift in Sources */,
 				81AE29EB20362CC800914A5F /* LoginViewController.swift in Sources */,
