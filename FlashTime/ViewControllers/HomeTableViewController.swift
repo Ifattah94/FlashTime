@@ -20,7 +20,9 @@ class HomeTableViewController: UITableViewController {
         tableView.register(CategoryTableViewCell.self, forCellReuseIdentifier: "CategoryCell")
         self.navigationItem.title = "Categories"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(presentNewCategoryVC))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Sign Out", style: .done, target: self, action: #selector(signOutButtonPressed))
         loadData()
+        
         
     }
     
@@ -37,6 +39,16 @@ class HomeTableViewController: UITableViewController {
         newCategoryVC.modalTransitionStyle = .crossDissolve
         newCategoryVC.modalPresentationStyle = .overFullScreen
         present(newCategoryVC, animated: true)
+    }
+    
+    @objc func signOutButtonPressed() {
+        //AuthUserService.logOut()
+        AuthUserService.manager.logOut()
+        //self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
+        let loginVC = LoginViewController.storyBoardInstance()
+        //let navController =  UINavigationController(rootViewController: loginVC)
+        present(loginVC, animated: true)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
