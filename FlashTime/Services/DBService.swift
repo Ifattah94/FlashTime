@@ -15,6 +15,7 @@ class DBService: NSObject {
         rootRef = Database.database().reference()
         usersRef = rootRef.child("users")
         categoriesRef = rootRef.child("categories")
+        flashCardsRef = rootRef.child("flashCards")
         
     }
     static let manager = DBService()

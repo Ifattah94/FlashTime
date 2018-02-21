@@ -57,6 +57,15 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //let selectedCell = tableView.cellForRow(at: indexPath) as! CategoryTableViewCell
+        let selectedCategory = categories[indexPath.row]
+        let flashCardsVC = FlashCardsViewController(category: selectedCategory)
+        self.navigationController?.pushViewController(flashCardsVC, animated: true)
+        
+        
+    }
   
 
 }

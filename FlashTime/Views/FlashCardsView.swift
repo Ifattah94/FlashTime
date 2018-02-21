@@ -22,13 +22,11 @@ class FlashCardsView: UIView {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        
-        
+        layout.scrollDirection = .horizontal
+    
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        
         cv.backgroundColor = UIColor.lightGray
-        //cv.register(OtherVenueCell.self, forCellWithReuseIdentifier: "otherVenueCell")
+        cv.register(FlashCardCollectionViewCell.self, forCellWithReuseIdentifier: "FlashCardCell")
         return cv
     }()
     
@@ -43,7 +41,7 @@ class FlashCardsView: UIView {
     
     private func setupCollectionView() {
         self.addSubview(collectionView)
-        self.collectionView.snp.remakeConstraints {(make) in
+        self.collectionView.snp.makeConstraints {(make) in
             make.top.equalTo(self.snp.top)
             make.bottom.equalTo(self.snp.bottom)
             make.trailing.equalTo(self.snp.trailing)

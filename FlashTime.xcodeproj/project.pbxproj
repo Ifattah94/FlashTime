@@ -39,6 +39,8 @@
 		81C46AEC203A605F001B9859 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C46AEB203A605F001B9859 /* CategoryTableViewCell.swift */; };
 		81C46AEE203A67A2001B9859 /* NewCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C46AED203A67A2001B9859 /* NewCategoryViewController.swift */; };
 		81C46AF0203A8456001B9859 /* DBService+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C46AEF203A8456001B9859 /* DBService+Category.swift */; };
+		81EC7E9C203CBD1100B2FFAD /* NewFlashCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EC7E9B203CBD1100B2FFAD /* NewFlashCardViewController.swift */; };
+		81EC7E9E203CBD9B00B2FFAD /* FlashCardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EC7E9D203CBD9B00B2FFAD /* FlashCardCollectionViewCell.swift */; };
 		B00976A398E253ECCBE8D20B /* Pods_FlashTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEAAD69A2582BD5DE2B8ADDC /* Pods_FlashTime.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +102,8 @@
 		81C46AEB203A605F001B9859 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		81C46AED203A67A2001B9859 /* NewCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryViewController.swift; sourceTree = "<group>"; };
 		81C46AEF203A8456001B9859 /* DBService+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DBService+Category.swift"; sourceTree = "<group>"; };
+		81EC7E9B203CBD1100B2FFAD /* NewFlashCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFlashCardViewController.swift; sourceTree = "<group>"; };
+		81EC7E9D203CBD9B00B2FFAD /* FlashCardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashCardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A8285832DB120EE02CA1D8D6 /* Pods-FlashTimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashTimeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashTimeUITests/Pods-FlashTimeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AA5AEB24EDBDDC9C125A2086 /* Pods_FlashTimeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashTimeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57AEBAE2BC8C8AFA32EF18C /* Pods-FlashTimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashTimeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashTimeTests/Pods-FlashTimeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +240,7 @@
 				813A0EAB2038C368008C2106 /* TabViewController.swift */,
 				81C46AED203A67A2001B9859 /* NewCategoryViewController.swift */,
 				810C064C203C645C00ADD5BE /* FlashCardsViewController.swift */,
+				81EC7E9B203CBD1100B2FFAD /* NewFlashCardViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				81C46AEB203A605F001B9859 /* CategoryTableViewCell.swift */,
+				81EC7E9D203CBD9B00B2FFAD /* FlashCardCollectionViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -615,7 +621,9 @@
 				819916792037806F009EDDD5 /* AuthUserService.swift in Sources */,
 				8199167720377B22009EDDD5 /* AuthUserDelegate.swift in Sources */,
 				810C064D203C645C00ADD5BE /* FlashCardsViewController.swift in Sources */,
+				81EC7E9C203CBD1100B2FFAD /* NewFlashCardViewController.swift in Sources */,
 				810C0651203C6E7D00ADD5BE /* FlashCardsView.swift in Sources */,
+				81EC7E9E203CBD9B00B2FFAD /* FlashCardCollectionViewCell.swift in Sources */,
 				8199167D203783B1009EDDD5 /* DBService.swift in Sources */,
 				81C46AEC203A605F001B9859 /* CategoryTableViewCell.swift in Sources */,
 			);

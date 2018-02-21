@@ -85,8 +85,8 @@ class NewFlashCardView: UIView {
     private func setupViews() {
         setHeaderStackView()
         setTextField()
-        setupTipLabel()
-        setupTextView()
+        setupAnswerLabel()
+        setupAnswerTextView()
 
     }
     func setTextField() {
@@ -109,7 +109,7 @@ class NewFlashCardView: UIView {
         titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
     }
-    private func setupTipLabel() {
+    private func setupAnswerLabel() {
         addSubview(answerLabel)
         answerLabel.translatesAutoresizingMaskIntoConstraints = false
         answerLabel.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 15).isActive = true
@@ -117,7 +117,7 @@ class NewFlashCardView: UIView {
         answerLabel.trailingAnchor.constraint(equalTo: textField.trailingAnchor).isActive = true
         answerLabel.heightAnchor.constraint(equalToConstant: 35).isActive = true
     }
-    private func setupTextView() {
+    private func setupAnswerTextView() {
         addSubview(textView)
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.topAnchor.constraint(equalTo: answerLabel.bottomAnchor, constant: 15).isActive = true

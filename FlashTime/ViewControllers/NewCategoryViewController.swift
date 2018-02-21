@@ -21,7 +21,6 @@ let newCatView = NewCategoryView()
     }
     
     
-
     @objc func createButtonPressed() {
         guard !(newCatView.titleField.text?.isEmpty)! else {
             showAlert(title: "Error", message: "Category name cannot be blank")
