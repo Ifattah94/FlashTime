@@ -44,6 +44,13 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMSessionFetcher/Core (1.1.13)
   - leveldb-library (1.20)
+  - Material (2.13.5):
+    - Material/Core (= 2.13.5)
+  - Material/Core (2.13.5):
+    - Motion (~> 1.3.0)
+  - Motion (1.3.4):
+    - Motion/Core (= 1.3.4)
+  - Motion/Core (1.3.4)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -57,6 +64,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - Material (~> 2.13.5)
   - SnapKit
   - SVProgressHUD
 
@@ -71,10 +79,12 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 5bb1eae636127de695590f50e7d248483eb891e6
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  Material: ced3fd11882147b135f897ca20227174bb104ad0
+  Motion: 85b8777db2e68801c03a5c629e918c35dd184c8d
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
 
-PODFILE CHECKSUM: 709b2f0b705a01ae4dc13466c16c6bb1bdeb01da
+PODFILE CHECKSUM: 535d117cbe5759e1d6bce113cd77c39e92e47af4
 
 COCOAPODS: 1.4.0

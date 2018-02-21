@@ -12,6 +12,7 @@ target 'FlashTime' do
     pod 'Firebase/Storage'
     pod 'SnapKit'
     pod 'SVProgressHUD'
+    pod 'Material', '~> 2.13.5'
   target 'FlashTimeTests' do
     inherit! :search_paths
     # Pods for testing

@@ -10,6 +10,7 @@ import UIKit
 
 class FlashCardsViewController: UIViewController {
 
+    var selectedIndexPath = 0
     let cellSpacing = UIScreen.main.bounds.size.width * 0.2
     let flashCardsView = FlashCardsView()
     var category: Category!
@@ -38,6 +39,19 @@ class FlashCardsViewController: UIViewController {
         flashCardsView.collectionView.delegate = self
 
     }
+    func animateRotationY(view: UIImageView) {
+        let animation = CABasicAnimation(keyPath: "transform.rotation.y")
+        let angleRadian = CGFloat.pi * 2
+        //let rotation = CATransform3DMakeRotation(angleRadian, 1, 0, 0)
+        animation.fromValue = 0
+        animation.byValue = angleRadian
+        animation.toValue = angleRadian
+        animation.duration = 1.0
+        animation.repeatCount = 1
+        view.layer.add(animation, forKey: nil)
+        //imageView.layer.add(animation, forKey: nil)
+    }
+   
     
     func configureNavBar() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(showNewFlashCardVC))
@@ -97,4 +111,18 @@ extension FlashCardsViewController: UICollectionViewDelegateFlowLayout {
         return cellSpacing
     }
 }
-
+extension FlashCardsViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+            let cell = flashCardsView.collectionView.dequeueReusableCell(withReuseIdentifier: "FlashCardCell", for: indexPath) as! FlashCardCollectionViewCell
+            
+            let row = indexPath.row
+            let selectedCard = flashCards[row]
+            animateRotationY(view: cell.imageView)
+        selectedIndexPath = row
+            cell.textLabel.text = selectedCard.answer
+        self.flashCardsView.collectionView.reloadData()
+        
+    }
+    
+}
