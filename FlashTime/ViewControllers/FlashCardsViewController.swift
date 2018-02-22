@@ -124,18 +124,21 @@ extension FlashCardsViewController: UICollectionViewDelegate {
             animation.fromValue = 0
             animation.byValue = angleRadian
             animation.toValue = angleRadian
-            animation.duration = 1.5
+            animation.duration = 1.0
             animation.repeatCount = 1
             cell.imageView.layer.add(animation, forKey: nil)
             
             
         }) { (done) in
-            cell.textLabel.isHidden = false
+            
             if cell.textLabel.text == selectedCard.answer {
                 cell.textLabel.text = selectedCard.question
+               cell.textLabel.isHidden = true
             } else {
                 cell.textLabel.text = selectedCard.answer
+              cell.textLabel.isHidden = true
             }
+            cell.textLabel.isHidden = false
             
             
         }
