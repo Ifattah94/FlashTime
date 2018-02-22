@@ -41,15 +41,15 @@ class FlashCardsViewController: UIViewController {
     }
     func animateRotationY(view: UIImageView) {
         let animation = CABasicAnimation(keyPath: "transform.rotation.y")
-        let angleRadian = CGFloat.pi * 2
-        //let rotation = CATransform3DMakeRotation(angleRadian, 1, 0, 0)
+        let angleRadian = CGFloat.pi 
         animation.fromValue = 0
         animation.byValue = angleRadian
         animation.toValue = angleRadian
         animation.duration = 1.0
         animation.repeatCount = 1
         view.layer.add(animation, forKey: nil)
-        //imageView.layer.add(animation, forKey: nil)
+        
+        
     }
    
     
@@ -114,15 +114,41 @@ extension FlashCardsViewController: UICollectionViewDelegateFlowLayout {
 extension FlashCardsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-            let cell = flashCardsView.collectionView.dequeueReusableCell(withReuseIdentifier: "FlashCardCell", for: indexPath) as! FlashCardCollectionViewCell
-            
+            let cell = flashCardsView.collectionView.cellForItem(at: indexPath) as! FlashCardCollectionViewCell
+             cell.textLabel.isHidden = true
             let row = indexPath.row
             let selectedCard = flashCards[row]
-            animateRotationY(view: cell.imageView)
-        selectedIndexPath = row
-            cell.textLabel.text = selectedCard.answer
-        self.flashCardsView.collectionView.reloadData()
+        UIView.animate(withDuration: 1.0, animations: {
+            let animation = CABasicAnimation(keyPath: "transform.rotation.x")
+            let angleRadian = CGFloat.pi
+            animation.fromValue = 0
+            animation.byValue = angleRadian
+            animation.toValue = angleRadian
+            animation.duration = 1.5
+            animation.repeatCount = 1
+            cell.imageView.layer.add(animation, forKey: nil)
+            
+            
+        }) { (done) in
+            cell.textLabel.isHidden = false
+            if cell.textLabel.text == selectedCard.answer {
+                cell.textLabel.text = selectedCard.question
+            } else {
+                cell.textLabel.text = selectedCard.answer
+            }
+            
+            
+        }
+        
+        
+        
+            //animateRotationY(view: cell.imageView)
+        
+        //selectedIndexPath = row
+        
+        //self.flashCardsView.collectionView.reloadData()
         
     }
+    
     
 }

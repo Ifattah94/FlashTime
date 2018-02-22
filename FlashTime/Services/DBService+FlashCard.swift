@@ -56,12 +56,12 @@ extension DBService {
             for flashCardSnapshot in flashCardData {
                 guard let flashCardObject = flashCardSnapshot.value as? [String:Any] else {return}
                 guard let cardID = flashCardObject["cardID"] as? String,
-                let question = flashCardObject["question"] as? String,
-                let answer = flashCardObject["answer"] as? String,
-                let byUser = flashCardObject["byUser"] as? String,
-                let uID = flashCardObject["uID"] as? String,
-                let categoryID = flashCardObject["categoryID"] as? String
-                else {return}
+                    let question = flashCardObject["question"] as? String,
+                    let answer = flashCardObject["answer"] as? String,
+                    let byUser = flashCardObject["byUser"] as? String,
+                    let uID = flashCardObject["uID"] as? String,
+                    let categoryID = flashCardObject["categoryID"] as? String
+                    else {return}
                 
                 if uID != certainUID {
                     continue
